@@ -60,7 +60,8 @@ class YamboStaticScreeningDB(object):
         self.nqpoints = len(self.qpoints)
         
         #are we usign coulomb cutoff?
-        self.cutoff = "".join(database.variables['CUTOFF'][:][0]).strip()
+        #self.cutoff = "".join(database.variables['CUTOFF'][:][0]).strip()
+        self.cutoff = str(database.variables['CUTOFF'][:][0],'UTF-8').strip()
         
         self.readDBs()
 
